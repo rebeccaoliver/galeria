@@ -11,7 +11,6 @@
     <title>Galeria - Portfólio</title>
 </head>
 <body>
-    <!-- Modal para exibir imagem ampliada -->
     <div id="imageModal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -24,7 +23,7 @@
                 <a href="{% url 'index' %}">
                     <img src="{% static 'galeria/img/RbR-removebg-preview.png' %}" width="25%">
                 </a>
-            </div><!--logo-->
+            </div>
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="{% url 'index' %}">Início</a></li>
@@ -37,8 +36,8 @@
                 <a href="{% url 'index' %}#contato">
                     <button>Contato</button>
                 </a>
-            </div><!--btn-contato-->
-        </div><!--interface-->
+            </div>
+        </div><
     </header>
 
     <main>
@@ -106,15 +105,15 @@
                 <div class="flex">
                     <div class="logo-footer">
                         <img src="{% static 'galeria/img/RbR-removebg-preview.png' %}" width="100px">
-                    </div><!--logo-footer-->
+                    </div>
                     <div class="btn-social">
                         <a href="https://www.instagram.com/jessycabessa?igsh=aTFmOGJmdmloZWxz"><button><i class="bi bi-instagram"></i></button></a>
                         <a href=""><button><i class="bi bi-facebook"></i></button></a>
                         <a href="https://www.linkedin.com/in/jéssyca-bessa-29760a31"><button><i class="bi bi-linkedin"></i></button></a>
-                    </div><!--btn-social-->
+                    </div>
                 </div>
-            </div><!--line-footer-->
-        </div><!--interface-->
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -128,38 +127,35 @@
             modal.style.display = "block";
             modalImg.src = imgSrc;
             captionText.innerHTML = caption;
-            // Força um reflow antes de adicionar a classe show
             modal.offsetHeight;
             modal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Previne rolagem da página
+            document.body.style.overflow = 'hidden'; 
         }
 
         function closeModal() {
             modal.classList.remove('show');
             setTimeout(function() {
                 modal.style.display = "none";
-                document.body.style.overflow = ''; // Restaura rolagem da página
-            }, 300); // Tempo igual à duração da transição
+                document.body.style.overflow = ''; 
+            }, 300); 
         }
 
-        // Fechar modal ao clicar no X
+
         closeBtn.onclick = closeModal;
 
-        // Fechar modal ao clicar fora da imagem
+
         modal.onclick = function(event) {
             if (event.target === modal) {
                 closeModal();
             }
         }
 
-        // Fechar modal com a tecla ESC
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape" && modal.style.display === "block") {
                 closeModal();
             }
         });
 
-        // Prevenir que a imagem seja arrastada
         modalImg.addEventListener('dragstart', function(e) {
             e.preventDefault();
         });

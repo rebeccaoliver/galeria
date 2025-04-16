@@ -387,6 +387,47 @@ footer .flex{
     justify-content: center;
 }
 
+/* Sobre Nós */
+section.sobre-nos {
+    padding: 80px 4%;
+    margin-top: -40px;
+}
+
+section.sobre-nos .flex {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.sobre-card {
+    flex: 1;
+    background-color: rgba(26, 39, 91, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sobre-card:hover {
+    transform: translateY(-10px);
+}
+
+.sobre-card h3 {
+    font-size: 1.8rem;
+    color: #FFB12C;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre-card p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sobre-card p:last-child {
+    margin-bottom: 0;
+}
+
 /* Responsividade */
 @media (max-width: 1020px) {
     .interface {
@@ -415,6 +456,16 @@ footer .flex{
     form {
         padding: 20px;
     }
+
+    section.sobre-nos .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sobre-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -435,6 +486,14 @@ footer .flex{
 
     .btn-social {
         justify-content: center;
+    }
+
+    .sobre-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .sobre-card {
+        padding: 20px;
     }
 }
 

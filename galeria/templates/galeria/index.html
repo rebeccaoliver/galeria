@@ -20,8 +20,8 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#">Início</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#devs-atomus">Quem somos</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
                     <li><a href="{% url 'galeria' %}">Galeria</a></li>
                 </ul>
             </nav>
@@ -56,7 +56,7 @@
             </div><!--interface-->
         </section><!--topo-do-site-->
 
-        <section class="portfolio">
+        <section class="portfolio" id="devs-atomus">
             <div class="interface">
                 <h2 class="titulo">DEVS <span>ATOMUS.</span></h2>
                 <div class="flex">
@@ -77,6 +77,30 @@
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--portfolio-->
+
+        <section class="sobre-nos" id="sobre-nos">
+            <div class="interface">
+                <h2 class="titulo">SOBRE <span>NÓS.</span></h2>
+                <div class="flex">
+                    <div class="sobre-card">
+                        <h3>Rebecca</h3>
+                        <p>Sou estudante do curso técnico em Informática no IFCE, apaixonada por tecnologia, música e tudo que envolve criar coisas novas. Nas horas vagas, sou musicista — toco violão, guitarra e baixo — e também curto explorar o mundo da eletrônica e me divertir com uma boa partida de Tetris ou Ping Pong.</p>
+                        <p>Atualmente, estou estudando linguagens como Python, Java, HTML e CSS, sempre buscando aprender mais e aplicar isso em projetos criativos.</p>
+                        <p>Meu objetivo é seguir carreira em Engenharia Mecatrônica, unindo software, eletrônica e mecânica para desenvolver soluções inovadoras — e, quem sabe, inspirar outras pessoas a entrarem nesse universo também.</p>
+                    </div>
+
+                    <div class="sobre-card">
+                        <h3>Raquel</h3>
+                        <p>Meu nome é Tereza Raquel Juvenal Matos, tenho 18 anos de idade, moro no interior de maranguape, estou cursando o sexto semestre em informática no IFCE campus maranguape. Sou uma pessoa que ama esportes, principalmente vôlei seja de quadra ou de praia.</p>
+                    </div>
+
+                    <div class="sobre-card">
+                        <h3>Gabriel</h3>
+                        <p>Visão tropa!! Me chamo Gabriel, mas pode me chamar de Bel. Amo jogar bola e praticar esportes, e o meu sonho sempre foi ser jogador de futebol (quem nunca). Hoje meu sonho mais realista é se tornar engenheiro chefe da Fórmula 1.</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--sobre-nos-->
 
         <section class="formulario" id="contato">
             <div class="interface">

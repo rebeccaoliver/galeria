@@ -28,13 +28,13 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="{% url 'index' %}">Início</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="{% url 'index' %}#devs-atomus">Quem somos</a></li>
+                    <li><a href="{% url 'index' %}#sobre-nos">Sobre nós</a></li>
                     <li><a href="{% url 'galeria' %}" class="active">Galeria</a></li>
                 </ul>
             </nav>
             <div class="btn-contato">
-                <a href="#contato">
+                <a href="{% url 'index' %}#contato">
                     <button>Contato</button>
                 </a>
             </div><!--btn-contato-->

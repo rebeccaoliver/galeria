@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from galeria.views import index
+from galeria.views import index, galeria
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-]
+    path('galeria/', galeria, name='galeria'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
